@@ -379,6 +379,10 @@ Some versions require updates to the database. Look through [the list of databas
     1. Run `composer require ezsystems/ezplatform-page-migration`
     2. Add the bundle to `app/AppKernel.php`: `new EzSystems\EzPlatformPageMigrationBundle\EzPlatformPageMigrationBundle(),`
     3. Run command `bin/console ezplatform:page:migrate`
+    
+    !!! tip 
+        If you have a specific layout that is defined under ez_systems_landing_page_field_type key in one of your yml layout files you'll have to move it to ezplatform_page_fieldtype. if you don't do it your layout will never be found. 
+    !!! tip
 
     You can remove the bundle after the migration is complete.
 
